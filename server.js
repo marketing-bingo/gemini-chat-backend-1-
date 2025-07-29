@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const GEMINI_API_KEY = "AIzaSyBdWiC3GOTmzzNQKG8fz2T0i-dGackoKpg";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 app.post("/ask", async (req, res) => {
   const userQuestion = req.body.question;
